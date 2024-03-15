@@ -9,7 +9,33 @@ type Props = {
   };
 };
 
-export default async function page({ params: { postId } }: Props) {
+export function generateStaticParams() {
+  const posts = getSortedPostsData();
+
+  return posts.map((post) => ({
+    postId: post.id,
+  }));
+}
+
+export function generateMetadata({ params }: { params: { postId: string } }) {
+  const { postId } = params;
+
+  const posts = getSortedPostsData(); // next will dedupe the data
+
+  const post = posts.find((post) => post.id === postId);
+
+  if (!post) {
+    return {
+      title: "Post Not Found",
+    };
+  }
+
+  return {
+    title: post.title,
+  };
+}
+
+export default async function Post({ params: { postId } }: Props) {
   const posts = getSortedPostsData(); // next.js will de-dupe the data
 
   if (!posts.find((post) => post.id === postId)) notFound();
