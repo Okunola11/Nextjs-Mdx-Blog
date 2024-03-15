@@ -45,9 +45,9 @@ export default async function Post({ params: { postId } }: Props) {
   const formattedDate = getFormattedDates(date);
 
   return (
-    <main>
-      <h1>{title}</h1>
-      <p>{formattedDate}</p>
+    <main className="px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
+      <h1 className="text-3xl mt-4 mb-0">{title}</h1>
+      <p className="mt-0">{formattedDate}</p>
       <article>
         <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
       </article>
@@ -55,6 +55,8 @@ export default async function Post({ params: { postId } }: Props) {
         <Link href="/">← Back to Home</Link>
       </p>
     </main>
+    // className="text-3xl mt-4 mb-0"
+    // px-6 prose prose-xl prose-slate dark:prose-invert mx-auto
   );
 }
 
