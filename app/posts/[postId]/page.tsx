@@ -1,7 +1,9 @@
-import { getPostData, getSortedPostsData } from "@/lib/post";
+import { getPostsMeta, getPostByName } from "@/lib/post";
 import getFormattedDates from "@/lib/getFormattedDates";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+
+export const revalidate = 0; // it's like setting cache to no-cache
 
 type Props = {
   params: {
@@ -9,20 +11,26 @@ type Props = {
   };
 };
 
-export function generateStaticParams() {
-  const posts = getSortedPostsData();
+/* export async function generateStaticParams() {
+  const posts = await getPostsMeta(); // deduped: all server-side fetches will be deduped by next
+
+  if (!posts) {
+    return []
+  }
 
   return posts.map((post) => ({
     postId: post.id,
   }));
-}
+} */
 
-export function generateMetadata({ params }: { params: { postId: string } }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: { postId: string };
+}) {
   const { postId } = params;
 
-  const posts = getSortedPostsData(); // next will dedupe the data
-
-  const post = posts.find((post) => post.id === postId);
+  const post = await getPostByName(`${postId}.mdx`); // next will dedupe the data
 
   if (!post) {
     return {
@@ -31,32 +39,38 @@ export function generateMetadata({ params }: { params: { postId: string } }) {
   }
 
   return {
-    title: post.title,
+    title: post.meta.title,
   };
 }
 
 export default async function Post({ params: { postId } }: Props) {
-  const posts = getSortedPostsData(); // next.js will de-dupe the data
+  const post = await getPostByName(`${postId}.mdx`); // next.js will de-dupe the data
 
-  if (!posts.find((post) => post.id === postId)) notFound();
+  if (!post) notFound();
 
-  const { title, date, contentHtml } = await getPostData(postId);
+  const { meta, content } = post;
 
-  const formattedDate = getFormattedDates(date);
+  const formattedDate = getFormattedDates(meta.date);
+
+  const tags = meta.tags.map((tag, i) => (
+    <Link key={i} href={`/tags/${tag}`}>
+      {tag}
+    </Link>
+  ));
 
   return (
-    <main className="px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
-      <h1 className="text-3xl mt-4 mb-0">{title}</h1>
-      <p className="mt-0">{formattedDate}</p>
-      <article>
-        <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
-      </article>
-      <p>
-        <Link href="/">← Back to Home</Link>
-      </p>
-    </main>
-    // className="text-3xl mt-4 mb-0"
-    // px-6 prose prose-xl prose-slate dark:prose-invert mx-auto
+    <>
+      <h2 className="text-3xl mt-4 mb-0">{meta.title}</h2>
+      <p className="mt-0 text-sm">{formattedDate}</p>
+      <article>{content}</article>
+      <section>
+        <h3>Related:</h3>
+        <div className="flex flex-row gap-4">{tags}</div>
+        <p className="mb-10">
+          <Link href="/">← Back to home</Link>
+        </p>
+      </section>
+    </>
   );
 }
 

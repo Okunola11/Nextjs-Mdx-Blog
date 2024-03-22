@@ -1,5 +1,4 @@
 import { compileMDX } from "next-mdx-remote/rsc";
-import { title } from "process";
 
 type Filetree = {
   "tree": [
@@ -45,6 +44,7 @@ export async function getPostByName(
     },
     content,
   };
+  return blogPostObj;
 }
 
 export async function getPostsMeta(): Promise<Meta[] | undefined> {
