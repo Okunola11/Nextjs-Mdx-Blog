@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import "highlight.js/styles/github-dark.css";
 
-export const revalidate = 10; // it's like setting cache to no-cache
+export const revalidate = 86400; // it's like setting cache to no-cache
 
 type Props = {
   params: {
