@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaYoutube, FaTwitter, FaGithub, FaLaptop } from "react-icons/fa";
+import { FaTwitter, FaGithub, FaLaptop, FaLinkedin } from "react-icons/fa";
 
 export default function Navbar() {
   return (
@@ -16,25 +16,25 @@ export default function Navbar() {
         <div className="flex flex-row justify-center sm:justify-evenly align-middle gap-4 text-white text-4xl lg:text-5xl">
           <Link
             className="text-white/90 hover:text-white"
-            href="https://www.youtube.com/@DaveGrayTeachesCode"
+            href="https://www.linkedin.com/in/waas"
           >
-            <FaYoutube />
+            <FaLinkedin />
           </Link>
           <Link
             className="text-white/90 hover:text-white"
-            href="https://courses.davegray.codes/"
+            href="https://github.com/okunola11"
           >
             <FaLaptop />
           </Link>
           <Link
             className="text-white/90 hover:text-white"
-            href="https://github.com/gitdagray"
+            href="https://github.com/okunola11"
           >
             <FaGithub />
           </Link>
           <Link
             className="text-white/90 hover:text-white"
-            href="https://twitter.com/yesdavidgray"
+            href="https://twitter.com/AbdulAyo4"
           >
             <FaTwitter />
           </Link>
