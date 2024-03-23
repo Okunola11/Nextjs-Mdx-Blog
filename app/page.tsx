@@ -8,10 +8,14 @@ export default function Home() {
     <div className="mx-auto">
       <MyProfilePic />
       <p className="mt-12 mb-12 text-3xl text-center dark:text-white">
-        Hello and Welcome 👋&nbsp; to my blog
+        Hello, welcome 👋&nbsp;to my blog!
+        <br />
+        It's a pleasure to have you here.{" "}
         <span className="whitespace-nowrap">
           I'm <span className="font-bold">Waasi</span>
-        </span>
+        </span>{" "}
+        and I'm excited to embark on this journey of sharing insights,
+        experiences, and knowledge with you.
       </p>
       <Posts />
     </div>
