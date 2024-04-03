@@ -11,11 +11,9 @@ export default function Home() {
         Hello, welcome 👋&nbsp;to my blog!
         <br />
         It's a pleasure to have you here.{" "}
-        <span className="whitespace-nowrap">
-          I'm <span className="font-bold">Waasi</span>
-        </span>{" "}
-        and I'm excited to embark on this journey of sharing insights,
-        experiences, and knowledge with you.
+        <span className="whitespace-nowrap font-bold">I'm Waasi</span> and I'm
+        excited to embark on this journey of sharing insights, experiences, and
+        knowledge with you.
       </p>
       <Posts />
     </div>

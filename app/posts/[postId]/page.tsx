@@ -55,14 +55,16 @@ export default async function Post({ params: { postId } }: Props) {
 
   return (
     <>
-      <h2 className="text-3xl mt-4 mb-0">{meta.title}</h2>
+      <h2 className="text-3xl mt-4 mb-0 font-bold">{meta.title}</h2>
       <p className="mt-0 text-sm">{formattedDate}</p>
       <article>{content}</article>
       <section>
-        <h3>Related:</h3>
-        <div className="flex flex-row gap-4">{tags}</div>
+        <h3 className="text-xl font-semibold mb-2">Related:</h3>
+        <div className="flex flex-row gap-2">{tags}</div>
         <p className="mb-10">
-          <Link href="/">← Back to home</Link>
+          <Link href="/" className="text-blue-500 hover:underline">
+            ← Back to home
+          </Link>
         </p>
       </section>
     </>
