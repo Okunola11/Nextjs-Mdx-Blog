@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import "highlight.js/styles/github-dark.css";
 
-export const revalidate = 86400; // it's like setting cache to no-cache
+export const revalidate = 0; // it's like setting cache to no-cache
 
 type Props = {
   params: {
@@ -12,7 +12,7 @@ type Props = {
   };
 };
 
-export async function generateStaticParams() {
+/* export async function generateStaticParams() {
   const posts = await getPostsMeta(); // deduped: all server-side fetches will be deduped by next
 
   if (!posts) {
@@ -22,7 +22,7 @@ export async function generateStaticParams() {
   return posts.map((post) => ({
     postId: post.id,
   }));
-}
+} */
 
 export async function generateMetadata({ params: { postId } }: Props) {
   const post = await getPostByName(`${postId}.mdx`); // next will dedupe the data

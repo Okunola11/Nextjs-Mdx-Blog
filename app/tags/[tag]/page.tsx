@@ -2,7 +2,7 @@ import { getPostsMeta } from "@/lib/post";
 import PostsList from "@/app/components/PostsList";
 import Link from "next/link";
 
-export const revalidate = 86400;
+export const revalidate = 0;
 
 type Props = {
   params: {
@@ -10,7 +10,7 @@ type Props = {
   };
 };
 
-export async function generateStaticParams() {
+/* export async function generateStaticParams() {
   const posts = await getPostsMeta(); // de-duped
 
   if (!posts) return [];
@@ -19,7 +19,7 @@ export async function generateStaticParams() {
   // out the array into one (we have arrays of arrays when we call map). we call new Set() to remove duplicates
 
   return Array.from(tags).map((tag) => ({ tag })); // this creates an array of objects
-}
+} */
 
 export async function generateMetadata({ params: { tag } }: Props) {
   return {
