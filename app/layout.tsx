@@ -14,12 +14,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="dark:bg-slate-800">
+      <body className="dark:bg-black">
         <Navbar />
-        <main className="px-4 md:px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
+        <main className="px-4 md:px-6 prose prose-xl prose-slate dark:prose-invert max-w-none mx-auto">
           {children}
         </main>
       </body>
+      {/* dark:bg-slate-800 */}
     </html>
   );
 }

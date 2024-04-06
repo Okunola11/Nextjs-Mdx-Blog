@@ -71,7 +71,7 @@ export default function Navbar() {
           </nav>
         </div>
       </header> */}
-      <header className="bg-white dark:bg-gray-900">
+      <header className="bg-white dark:bg-gray-900 p-1 sticky top-0 drop-shadow-xl z-10">
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex gap-2 items-center md:gap-4">

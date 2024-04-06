@@ -54,7 +54,7 @@ export default async function Post({ params: { postId } }: Props) {
   ));
 
   return (
-    <>
+    <div className="max-w-2xl mx-auto">
       <h2 className="text-3xl mt-4 mb-0 font-bold">{meta.title}</h2>
       <p className="mt-0 text-sm">{formattedDate}</p>
       <article>{content}</article>
@@ -67,7 +67,7 @@ export default async function Post({ params: { postId } }: Props) {
           </Link>
         </p>
       </section>
-    </>
+    </div>
   );
 }
 
