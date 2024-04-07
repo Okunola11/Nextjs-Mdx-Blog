@@ -32,7 +32,7 @@ export default async function Posts() {
       <section className="h-screen bg-white"></section>
 
       <section className="grid grid-cols-1 md:grid-cols-3 relative p-0 m-0 w-full">
-        <ul className="md:col-span-2 order-2 md:order-1 md:pt-16 p-0 md:pl-6 md:max-w-2xl">
+        <ul className="md:col-span-2 order-2 md:order-1 md:pt-16 p-0 md:pl-6 md:max-w-2xl flex flex-col">
           {posts.map((post) => (
             <PostsList key={post.id} post={post} />
           ))}

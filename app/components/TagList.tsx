@@ -12,7 +12,7 @@ export default function TagList({ allTags }: Props) {
 
   const tags = tagsArray.map((tag, i) => (
     <Link
-      className="no-underline font-light shadow border border-solid border-gray-950 rounded-lg dark:border-gray-300 px-4"
+      className="no-underline font-light shadow bg-gray-200 dark:bg-black border border-solid border-gray-950 rounded-lg dark:border-gray-300 px-4"
       key={i}
       href={`/tags/${tag}`}
     >
