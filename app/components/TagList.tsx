@@ -12,7 +12,7 @@ export default function TagList({ allTags }: Props) {
 
   const tags = tagsArray.map((tag, i) => (
     <Link
-      className="no-underline shadow border border-solid border-gray-950 rounded-lg dark:border-gray-300 px-4"
+      className="no-underline font-light shadow border border-solid border-gray-950 rounded-lg dark:border-gray-300 px-4"
       key={i}
       href={`/tags/${tag}`}
     >
@@ -22,8 +22,8 @@ export default function TagList({ allTags }: Props) {
 
   return (
     <div>
-      <h3>Reading tailored for you</h3>
-      <div className="flex flex-row flex-wrap gap-4 p-2">{tags}</div>
+      <p className="font-bold">Reading tailored for you</p>
+      <div className="flex flex-row flex-wrap gap-4 p-2 pt-0">{tags}</div>
     </div>
   );
 }
