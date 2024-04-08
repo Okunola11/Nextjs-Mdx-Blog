@@ -16,25 +16,12 @@ export default async function Posts() {
   });
 
   return (
-    <>
-      {/*  <section className="h-screen flex flex-col-reverse md:flex-row w-full gap-6 top-6">
-        <ul className="list-none min-h-screen overflow-y-auto scrollbar-hidden">
-          {posts.map((post) => (
-            <PostsList key={post.id} post={post} />
-          ))}
-        </ul>
-        <div className="w-3/6 min-h-screen overflow-hidden">
-          <div className="h-full">
-            <TagList allTags={allTags} />
-          </div>
-        </div>
-      </section>
- */}
-      <section className="">
+    <div className="w-full">
+      <section>
         <SparklesPreview />
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-3 relative p-0 m-0 w-full">
+      <section className="px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 relative w-full">
         <ul className="md:col-span-2 order-2 md:order-1 md:pt-16 p-0 md:pl-6 md:max-w-2xl flex flex-col">
           {posts.map((post) => (
             <PostsList key={post.id} post={post} />
@@ -47,6 +34,6 @@ export default async function Posts() {
           <TagList allTags={allTags} />
         </div>
       </section>
-    </>
+    </div>
   );
 }
