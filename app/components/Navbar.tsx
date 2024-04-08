@@ -1,14 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { FaTwitter, FaGithub, FaLaptop, FaLinkedin } from "react-icons/fa";
-import MyProfilePic from "./MyProfilePic";
 import { useState, useEffect } from "react";
+import MyProfilePic from "./MyProfilePic";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeTwoToneIcon from "@mui/icons-material/DarkModeTwoTone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import XIcon from "@mui/icons-material/X";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
@@ -32,20 +32,17 @@ export default function Navbar() {
 
   return (
     <>
-      {/* <header className="bg-slate-600 p-4 sticky top-0 drop-shadow-xl z-10">
-         <Avatar>
-        <AvatarImage src="https://github.com/shadcn.png" />
-        <AvatarFallback>CN</AvatarFallback>
-      </Avatar> */}
-
       <header className="bg-white dark:bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 p-1 sticky top-0 drop-shadow-xl z-10">
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex gap-2 items-center md:gap-4">
-              <a className="text-gray-500 dark:text-white" href="/about">
+              <Link className="text-gray-500 dark:text-white" href="/about">
                 <span className="sr-only">Okunola Abdulwasiu</span>
-                <MyProfilePic />
-              </a>
+                <Avatar>
+                  <AvatarImage src="/images/waasi.jpg" />
+                  <AvatarFallback>OA</AvatarFallback>
+                </Avatar>
+              </Link>
               <h1 className="text-gray-900 dark:text-white font-bold text-xl">
                 Okunola
               </h1>

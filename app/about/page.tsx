@@ -2,7 +2,7 @@ import MyProfilePic from "../components/MyProfilePic";
 
 export default function About() {
   return (
-    <div>
+    <div className="px-4 md:px-6 max-w-[800px] mx-auto">
       <MyProfilePic />
       <p className="mt-12 mb-12 text-3xl text-center dark:text-white">
         Hello, welcome 👋&nbsp;to my blog!

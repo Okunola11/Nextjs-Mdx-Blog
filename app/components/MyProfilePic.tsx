@@ -4,11 +4,11 @@ export default function MyProfilePic() {
   return (
     <section className="w-full mx-auto">
       <Image
-        className="border-4 border-black dark:border-slate-500 shadow-lg drop-shadow-xl shadow-black rounded-full mx-auto"
+        className="border-4 border-gray-500 dark:border-blue-700/50 shadow-lg drop-shadow-xl shadow-black rounded-full mx-auto"
         src="/images/waasi.jpg"
         alt="Waasi Okunola"
-        width={50}
-        height={50}
+        width={200}
+        height={200}
         priority={true}
       />
     </section>
