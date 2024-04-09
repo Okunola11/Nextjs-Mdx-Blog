@@ -11,7 +11,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        nunito: ["Nunito", "sans-serif"],
+      },
+    },
   },
   plugins: [
     require("@tailwindcss/typography"),

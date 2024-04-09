@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="dark:bg-[#000e1f]">
+      <body className="dark:bg-[#000e1f] font-nunito">
         <Navbar />
         <main className="prose prose-xl prose-slate dark:prose-invert max-w-none mx-auto">
           {children}
