@@ -8,6 +8,7 @@ import DarkModeTwoToneIcon from "@mui/icons-material/DarkModeTwoTone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import XIcon from "@mui/icons-material/X";
+import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function Navbar() {
@@ -43,8 +44,8 @@ export default function Navbar() {
                   <AvatarFallback>OA</AvatarFallback>
                 </Avatar>
               </Link>
-              <h1 className="text-gray-900 dark:text-white font-bold text-xl">
-                Okunola
+              <h1 className="text-gray-900 dark:text-white font-bold text-xl hidden md:block">
+                <Link href="/">Okunola</Link>
               </h1>
             </div>
 
@@ -63,7 +64,7 @@ export default function Navbar() {
                   <li>
                     <Link
                       className="text-gray-900 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 text-lg z-5"
-                      href="#"
+                      href="/trending"
                     >
                       Trending
                     </Link>
@@ -77,20 +78,17 @@ export default function Navbar() {
                       About me
                     </Link>
                   </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-900 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 text-lg"
-                      href="#"
-                    >
-                      Projects
-                    </Link>
-                  </li>
                 </ul>
               </nav>
             </div>
 
-            <div className="flex gap-2 md:gap-6">
+            <div className="flex items-center justify-center gap-3 md:gap-6">
+              <Link
+                className="text-gray-800 dark:text-gray-200 text-3xl md:hidden"
+                href="/"
+              >
+                <HomeRoundedIcon style={{ fontSize: 30 }} />
+              </Link>
               <Link
                 className="text-gray-800 dark:text-gray-200 text-xl"
                 href="https://twitter.com/AbdulAyo4"
@@ -119,36 +117,36 @@ export default function Navbar() {
                   <DarkModeTwoToneIcon />
                 )}
               </button>
+            </div>
 
-              <button
-                onClick={toggleMenu}
-                className="flex flex-col justify-center items-center md:hidden"
-              >
-                <span
-                  className={`bg-white block transition-all duration-300 ease-out 
+            <button
+              onClick={toggleMenu}
+              className="flex flex-col justify-center items-center md:hidden"
+            >
+              <span
+                className={`bg-white block transition-all duration-300 ease-out 
                     h-0.5 w-6 rounded-sm ${
                       isActive ? "rotate-45 translate-y-1" : "-translate-y-0.5"
                     }`}
-                ></span>
-                <span
-                  className={`bg-white block transition-all duration-300 ease-out 
+              ></span>
+              <span
+                className={`bg-white block transition-all duration-300 ease-out 
                     h-0.5 w-6 rounded-sm my-0.5 ${
                       isActive ? "opacity-0" : "opacity-100"
                     }`}
-                ></span>
-                <span
-                  className={`bg-white block transition-all duration-300 ease-out 
+              ></span>
+              <span
+                className={`bg-white block transition-all duration-300 ease-out 
                     h-0.5 w-6 rounded-sm ${
                       isActive ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
                     }`}
-                ></span>
-              </button>
-            </div>
+              ></span>
+            </button>
           </div>
         </div>
         <nav
           id="menu"
-          className={`bg-blue-500/50 text-center w-full transition duration-300 ease-in-out ${
+          className={`bg-[#000e1f]/50 text-center w-full transition duration-300 ease-in-out ${
             isActive ? "block" : "hidden"
           }`}
         >
@@ -166,15 +164,15 @@ export default function Navbar() {
                 href="/about"
                 className="text-white hover:text-gray-300 py-2 px-4"
               >
-                About
+                About the Author
               </Link>
             </li>
             <li>
               <Link
-                href="#"
+                href="/trending"
                 className="text-white hover:text-gray-300 py-2 px-4"
               >
-                Contact
+                Trending
               </Link>
             </li>
           </ul>

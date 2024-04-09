@@ -1,5 +1,7 @@
 import MyProfilePic from "../components/MyProfilePic";
 
+export const revalidate = 0;
+
 export default function About() {
   return (
     <div className="px-4 md:px-6 max-w-[800px] mx-auto">
