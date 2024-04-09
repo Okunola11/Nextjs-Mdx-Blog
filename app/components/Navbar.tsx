@@ -72,25 +72,25 @@ export default function Navbar() {
                   <li>
                     <Link
                       className="text-gray-900 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 text-lg z-5"
-                      href="#"
+                      href="/about"
                     >
                       About me
                     </Link>
                   </li>
 
                   <li>
-                    <a
+                    <Link
                       className="text-gray-900 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 text-lg"
                       href="#"
                     >
                       Projects
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
             </div>
 
-            <div className="flex gap-6">
+            <div className="flex gap-2 md:gap-6">
               <Link
                 className="text-gray-800 dark:text-gray-200 text-xl"
                 href="https://twitter.com/AbdulAyo4"
@@ -148,25 +148,34 @@ export default function Navbar() {
         </div>
         <nav
           id="menu"
-          className={`bg-gray-800 text-center w-full transition duration-300 ease-in-out ${
+          className={`bg-blue-500/50 text-center w-full transition duration-300 ease-in-out ${
             isActive ? "block" : "hidden"
           }`}
         >
-          <ul className="flex flex-col md:flex-row md:space-x-4 p-4">
+          <ul className="flex flex-col md:flex-row md:space-x-4 p-4 gap-2">
             <li>
-              <a href="#" className="text-white hover:text-gray-300 py-2 px-4">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-300 py-2 px-4"
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-gray-300 py-2 px-4">
+              <Link
+                href="/about"
+                className="text-white hover:text-gray-300 py-2 px-4"
+              >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-gray-300 py-2 px-4">
+              <Link
+                href="#"
+                className="text-white hover:text-gray-300 py-2 px-4"
+              >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
