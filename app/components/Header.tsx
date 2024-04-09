@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import MyProfilePic from "./MyProfilePic";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeTwoToneIcon from "@mui/icons-material/DarkModeTwoTone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -11,7 +10,7 @@ import XIcon from "@mui/icons-material/X";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-export default function Navbar() {
+export default function Header() {
   const [isActive, setIsActive] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
 

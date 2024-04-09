@@ -1,5 +1,5 @@
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="dark:bg-[#000e1f] font-nunito">
-        <Navbar />
+        <Header />
         <main className="prose prose-xl prose-slate dark:prose-invert max-w-none mx-auto">
           {children}
         </main>
