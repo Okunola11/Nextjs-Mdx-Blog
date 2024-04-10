@@ -36,6 +36,7 @@ export async function getPostByName(
     title: string;
     date: string;
     tags: string[];
+    intro: string;
   }>({
     source: rawMDX,
     components: {
@@ -67,6 +68,7 @@ export async function getPostByName(
       title: frontmatter.title,
       date: frontmatter.date,
       tags: frontmatter.tags,
+      intro: frontmatter.intro,
     },
     content,
   };
