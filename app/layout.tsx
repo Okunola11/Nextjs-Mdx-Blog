@@ -1,5 +1,6 @@
 import "./globals.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({
         <main className="prose prose-xl prose-slate dark:prose-invert max-w-none mx-auto">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

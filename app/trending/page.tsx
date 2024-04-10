@@ -20,7 +20,7 @@ export default async function Trending() {
   const topTags = getMostOccurringTags(flattenedArray, 5);
 
   return (
-    <div className="text-black dark:text-white p-4 mx-auto max-w-[800px]">
+    <div className="h-screen text-black dark:text-white p-4 mx-auto max-w-[800px]">
       <p>
         Explore the latest buzz: Dive into the trending topics captivating
         minds.

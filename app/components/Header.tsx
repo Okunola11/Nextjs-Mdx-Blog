@@ -32,7 +32,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-white dark:bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 p-1 sticky top-0 drop-shadow-xl z-10">
+      <header className="bg-white dark:bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 p-1 sticky top-0 drop-shadow-xl z-20">
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex gap-2 items-center md:gap-4">
