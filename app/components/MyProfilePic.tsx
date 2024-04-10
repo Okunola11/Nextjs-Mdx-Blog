@@ -5,7 +5,7 @@ export default function MyProfilePic() {
     <section className="w-full mx-auto">
       <Image
         className="border-4 border-gray-500 dark:border-blue-700/50 shadow-lg drop-shadow-xl shadow-black rounded-full mx-auto"
-        src="/images/waasi.jpg"
+        src="/images/waasi2.jpg"
         alt="Waasi Okunola"
         width={200}
         height={200}

@@ -39,7 +39,7 @@ export default function Header() {
               <Link className="text-gray-500 dark:text-white" href="/about">
                 <span className="sr-only">Okunola Abdulwasiu</span>
                 <Avatar>
-                  <AvatarImage src="/images/waasi.jpg" />
+                  <AvatarImage src="/images/waasi2.jpg" />
                   <AvatarFallback>OA</AvatarFallback>
                 </Avatar>
               </Link>
@@ -77,6 +77,15 @@ export default function Header() {
                       About me
                     </Link>
                   </li>
+
+                  <li>
+                    <Link
+                      className="text-gray-900 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 text-lg z-5"
+                      href="/projects"
+                    >
+                      Projects
+                    </Link>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -91,18 +100,21 @@ export default function Header() {
               <Link
                 className="text-gray-800 dark:text-gray-200 text-xl"
                 href="https://twitter.com/AbdulAyo4"
+                target="_blank"
               >
                 <XIcon />
               </Link>
               <Link
                 className="text-gray-800 dark:text-gray-200 text-xl"
                 href="https://github.com/okunola11"
+                target="_blank"
               >
                 <GitHubIcon />
               </Link>
               <Link
                 className="text-gray-800 dark:text-gray-200 text-xl"
                 href="https://www.linkedin.com/in/waas"
+                target="_blank"
               >
                 <LinkedInIcon />
               </Link>
@@ -123,19 +135,19 @@ export default function Header() {
               className="flex flex-col justify-center items-center md:hidden"
             >
               <span
-                className={`bg-white block transition-all duration-300 ease-out 
+                className={`bg-gray-800 dark:bg-gray-200 block transition-all duration-300 ease-out 
                     h-0.5 w-6 rounded-sm ${
                       isActive ? "rotate-45 translate-y-1" : "-translate-y-0.5"
                     }`}
               ></span>
               <span
-                className={`bg-white block transition-all duration-300 ease-out 
+                className={`bg-gray-800 dark:bg-gray-200 block transition-all duration-300 ease-out 
                     h-0.5 w-6 rounded-sm my-0.5 ${
                       isActive ? "opacity-0" : "opacity-100"
                     }`}
               ></span>
               <span
-                className={`bg-white block transition-all duration-300 ease-out 
+                className={`bg-gray-800 dark:bg-gray-200 block transition-all duration-300 ease-out 
                     h-0.5 w-6 rounded-sm ${
                       isActive ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
                     }`}
@@ -160,6 +172,14 @@ export default function Header() {
             </li>
             <li>
               <Link
+                href="/trending"
+                className="text-white hover:text-gray-300 py-2 px-4"
+              >
+                Trending
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/about"
                 className="text-white hover:text-gray-300 py-2 px-4"
               >
@@ -168,10 +188,10 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/trending"
+                href="/projects"
                 className="text-white hover:text-gray-300 py-2 px-4"
               >
-                Trending
+                Projects
               </Link>
             </li>
           </ul>
