@@ -1,6 +1,6 @@
 import MyProfilePic from "../components/MyProfilePic";
 
-export const revalidate = 0;
+export const revalidate = 86400;
 
 export default function About() {
   return (

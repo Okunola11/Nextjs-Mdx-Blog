@@ -2,7 +2,7 @@ import { getPostsMeta } from "@/lib/post";
 import getMostOccurringTags from "@/lib/getTopTags";
 import TrendingList from "../components/TrendingList";
 
-export const revalidate = 0;
+export const revalidate = 86400;
 
 export default async function Trending() {
   const posts = await getPostsMeta();
