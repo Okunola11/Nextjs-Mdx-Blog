@@ -77,15 +77,6 @@ export default function Header() {
                       About me
                     </Link>
                   </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-900 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 text-lg z-5"
-                      href="/projects"
-                    >
-                      Projects
-                    </Link>
-                  </li>
                 </ul>
               </nav>
             </div>
@@ -184,14 +175,6 @@ export default function Header() {
                 className="text-white hover:text-gray-300 py-2 px-4"
               >
                 About the Author
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/projects"
-                className="text-white hover:text-gray-300 py-2 px-4"
-              >
-                Projects
               </Link>
             </li>
           </ul>

@@ -1,6 +1,5 @@
 import { getPostsMeta } from "@/lib/post";
 import PostsList from "./PostsList";
-import Link from "next/link";
 import TagList from "./TagList";
 import SparklesPreview from "./Hero";
 
