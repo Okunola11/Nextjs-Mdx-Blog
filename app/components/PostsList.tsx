@@ -31,7 +31,7 @@ export default function PostsList({ post }: Props) {
               alt="Author"
               width={200}
               height={200}
-              src={`https://raw.githubusercontent.com/okunola11/blogPosts-test/main/images/${id}.png`}
+              src={`https://raw.githubusercontent.com/okunola11/blogPosts-test/main/${id}/${id}.png`}
               onError={() => setImageError(true)} // We handle image load error here
               className="rounded-xl object-cover shadow-xl transition group-hover:grayscale-[50%] dark:shadow-gray-700/25 p-4"
             />
@@ -43,7 +43,7 @@ export default function PostsList({ post }: Props) {
             {title}
           </h3>
 
-          <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
+          <p className="hidden md:block mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
             {intro}
           </p>
 

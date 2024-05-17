@@ -9,7 +9,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "raw.githubusercontent.com",
         port: "",
-        pathname: "/okunola11/blogPosts-test/main/images/**",
+        pathname: "/okunola11/blogPosts-test/main/**",
       },
     ],
   },
