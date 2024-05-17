@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params: { postId } }: Props) {
-  const post = await getPostByName(`${postId}.mdx`); // next will dedupe the data
+  const post = await getPostByName(`${postId}/${postId}.mdx`); // next will dedupe the data
 
   if (!post) {
     return {
@@ -39,7 +39,7 @@ export async function generateMetadata({ params: { postId } }: Props) {
 }
 
 export default async function Post({ params: { postId } }: Props) {
-  const post = await getPostByName(`${postId}.mdx`); // next.js will de-dupe the data
+  const post = await getPostByName(`${postId}/${postId}.mdx`); // next.js will de-dupe the data
 
   if (!post) notFound();
 

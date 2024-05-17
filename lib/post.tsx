@@ -60,7 +60,7 @@ export async function getPostByName(
     },
   });
 
-  const id = fileName.replace(/\.mdx$/, "");
+  const id = fileName.replace(/\/[^/]*\.mdx$/, "");
 
   const blogPostObj: BlogPost = {
     meta: {
