@@ -4,6 +4,8 @@ import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
 import Video from "@/app/components/Video";
 import CustomImage from "@/app/components/CustomImage";
+// Custom Plugin
+import remarkInlineCodeClass from "./remarkInlineCode";
 
 type Filetree = {
   "tree": [
@@ -26,11 +28,17 @@ export async function getPostByName(
       },
     }
   );
-  if (!res.ok) return undefined;
+  if (!res.ok) {
+    console.error(`Failed to fetch file: ${res.statusText}`);
+    return undefined;
+  }
 
   const rawMDX = await res.text();
 
-  if (rawMDX === "404: Not Found") return undefined;
+  if (rawMDX === "404: Not Found") {
+    console.error("File not found");
+    return undefined;
+  }
 
   const { frontmatter, content } = await compileMDX<{
     title: string;
@@ -46,6 +54,7 @@ export async function getPostByName(
     options: {
       parseFrontmatter: true,
       mdxOptions: {
+        remarkPlugins: [remarkInlineCodeClass],
         rehypePlugins: [
           rehypeHighlight,
           rehypeSlug,
