@@ -44,7 +44,7 @@ export default function Header() {
                 </Avatar>
               </Link>
               <h1 className="text-gray-900 dark:text-white font-bold text-xl hidden md:block">
-                <Link href="/">Okunola</Link>
+                <Link href="/">Waasi Blog</Link>
               </h1>
             </div>
 

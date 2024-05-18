@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="dark:bg-[#000e1f] font-nunito">
+      <body className="dark:bg-[#000e1f] font-nunito text-base md:text-xl">
         <Header />
         <main className="prose prose-xl prose-slate dark:prose-invert max-w-none mx-auto">
           {children}

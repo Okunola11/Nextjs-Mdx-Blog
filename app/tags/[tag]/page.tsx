@@ -46,7 +46,7 @@ export default async function TagPostList({ params: { tag } }: Props) {
   }
 
   return (
-    <div className="px-4 md:px-6">
+    <div className="px-4 md:px-6 min-h-screen">
       <h2 className="text-3xl mt-4 mb-0">Results for: #{tag}</h2>
       <section className="mt-6 mx-auto max-w-2xl">
         <ul className="w-full list-none p-0">
