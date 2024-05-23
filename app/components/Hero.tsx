@@ -3,7 +3,7 @@
 import React from "react";
 import { SparklesCore } from "@/components/ui/sparkles";
 
-export default function hero() {
+export default function Hero() {
   return (
     <div className="h-[40rem] relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-bl-md rounded-br-md">
       <div className="w-full absolute inset-0 h-screen">
@@ -17,7 +17,7 @@ export default function hero() {
           particleColor="#FFFFFF"
         />
       </div>
-      <h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-white relative z-5">
+      <h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-white relative z-5 m-0 p-0">
         Abdulwasiu Okunola
       </h1>
 
@@ -38,9 +38,11 @@ export default function hero() {
 
         {/* <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div> */}
       </div>
-      <p className="text-black dark:text-white mt-2">Hi, welcome to my Blog!</p>
+      <p className="text-black dark:text-white mt-2 mb-0 p-0">
+        Hi, welcome to my Blog!
+      </p>
       <div></div>
-      <p className="border border-white border-solid p-2 rounded-xl shadow-white shadow-sm bg-white text-black mt-3">
+      <p className="border border-white border-solid rounded-xl shadow-white shadow-sm bg-white text-black mt-3 mb-0 p-2 text-xl">
         Discover stories!
       </p>
     </div>
