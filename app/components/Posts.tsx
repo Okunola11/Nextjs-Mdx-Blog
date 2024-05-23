@@ -1,4 +1,5 @@
 import { getPostsMeta } from "@/lib/post";
+import Hero from "./Hero";
 import PostsList from "./PostsList";
 import TagList from "./TagList";
 
@@ -15,6 +16,10 @@ export default async function Posts() {
 
   return (
     <div className="w-full">
+      <section>
+        <Hero />
+      </section>
+
       <section className="px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 relative w-full">
         <ul className="md:col-span-2 order-2 md:order-1 md:pt-16 p-0 md:pl-6 md:max-w-2xl flex flex-col">
           {posts.map((post) => (
